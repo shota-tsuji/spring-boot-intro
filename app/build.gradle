@@ -28,9 +28,12 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1-jre'
 
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+    implementation('org.springframework:spring-web')
+    implementation('org.springframework:spring-webmvc')
+
+    compileOnly('org.projectlombok:lombok:1.18.+')
 }
 
 application {
