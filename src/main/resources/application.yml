@@ -6,5 +6,11 @@ spring:
       enabled: true
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     show-sql: true
+
+logging:
+  level:
+    root: INFO
+  file:
+    path: ./log
