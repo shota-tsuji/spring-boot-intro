@@ -1,12 +1,15 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    # DBの内容をローカルに保存する
+    url: jdbc:h2:./testdb
   h2:
     console:
       enabled: true
   jpa:
     hibernate:
-      ddl-auto: none
+      # @Entityのテーブルがない場合削除する
+      # アプリケーションが終了してもテーブルを削除しない
+      ddl-auto: update
     show-sql: true
 
 logging:
